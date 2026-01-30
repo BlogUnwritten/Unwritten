@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
+
+/* ---------- BACKGROUND CANVAS ---------- */
+#bgCanvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    padding: 90px 20px 50px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* ---------- FILTERS ---------- */
+.tag-filter {
+    max-width: 900px;
+    margin: 10px auto; /* reduced vertical spacing */
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* shared pill style */
+.tag,
+.author {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.tag:hover,
+.author:hover {
+    background: rgba(199,164,93,0.25);
+}
+
+.tag.active,
+.author.active {
+    background: rgba(199,164,93,0.35);
+    border-color: #c7a45d;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    max-width: 900px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+/* ---------- HEADINGS ---------- */
+.featured-heading, .blogs-heading {
+    font-size: 1.7rem;
+    color: white;
+    margin: 40px 0 20px;
+}
+
+/* ---------- BLOG CARD ---------- */
+.blog-post {
+    background: rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 36px;
+    margin-bottom: 42px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-post.featured-blog {
+    border: 2px solid #c7a45d;
+}
+
+.blog-post:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+}
+
+.blog-post h2 {
+    color: #c7a45d;
+    margin-bottom: 10px;
+}
+
+.meta {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.blog-content {
+    white-space: pre-line;
+    line-height: 1.7;
+}
+
+/* ---------- TAGS ---------- */
+.blog-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* share + tags container */
+.tags-share-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.blog-tags span {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(199,164,93,0.25);
+}
+
+/* ---------- SHARE BUTTONS ---------- */
+/* ---------- SHARE BUTTONS ---------- */
+/* ---------- SHARE BUTTONS ---------- */
+.share-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.share-btn img {
+    max-width: 24px;      /* maximum width */
+    max-height: 24px;     /* maximum height */
+    width: auto;          /* preserve aspect ratio */
+    height: auto;         /* preserve aspect ratio */
+    object-fit: contain;  /* ensure the image fits inside box */
+    filter: grayscale(100%);
+    transition: transform 0.2s ease, filter 0.2s ease;
+    cursor: pointer;
+}
+
+.share-btn img:hover {
+    transform: scale(1.2);   /* hover zoom effect */
+    filter: grayscale(0%);
+}
+
+
+
+
+/* ---------- INTERNAL TOAST ---------- */
+.toast-message {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(199,164,93,0.9);
+    color: #0f172a;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: fadeInOut 2s forwards;
+    z-index: 9999;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px);}
+    10%, 90% { opacity: 1; transform: translateY(0);}
+    100% { opacity: 0; transform: translateY(-20px);}
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 25px;
+    opacity: 0.6;
+}

@@ -1,0 +1,7 @@
+Title: Testing Blog 2
+Authors: Author-2
+Date: 2026-01-30
+Tags: tag-3, tag-4
+Featured: false
+
+This is just a working ground for blog 2.
