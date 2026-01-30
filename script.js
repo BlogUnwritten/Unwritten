@@ -2,7 +2,7 @@ const blogContainer = document.getElementById("blog-container");
 const tagFilter = document.getElementById("tagFilter");
 const authorFilter = document.getElementById("authorFilter");
 
-const blogFiles = ["Blogs/blog-1.txt", "Blog/blog-2.txt"];
+const blogFiles = ["Blogs/blog-1.txt", "Blogs/blog-2.txt"];
 let blogs = [];
 let activeTags = new Set();
 let activeAuthors = new Set();
